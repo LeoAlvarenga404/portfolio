@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  --pink: #e56caa;
+  --dark-purple: #3c2a67;
+  --purple: #9353bb;
+  --light-blue: #a4dcec;
+  --cian-blue: #749cb4;
+  --text-color: #f8f8f8;
+  --bg-color: #1b1b30;
+  --border-color: #110e11;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 36rem auto;
+  grid-template-areas: "aside main";
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+body, input, textarea, button {
+  font-family: "Inter", sans-serif;
+}
+
+li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+aside {
+  width: 100%;
+  grid-area: aside;
+  border-right: 0.1rem solid var(--border-color);
+  position: relative;
+  background-color: var(--bg-color);
+  z-index: 99;
+}
+aside .container {
+  padding: 2rem;
+}
+aside .container .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+aside .container .profile img {
+  width: 100%;
+  max-width: 15rem;
+  height: 100%;
+  max-height: 15rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+}
+aside .container .profile h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+aside .container .profile span {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--light-blue);
+}
+aside .container .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-top: 2rem;
+}
+aside .container .social-media a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+aside .container .social-media a i {
+  font-size: 3rem;
+}
+aside .container .skills h2 {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--cian-blue);
+}
+aside .container .skills .techs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+aside .container .skills .techs img {
+  width: 8rem;
+  filter: grayscale(0.5);
+  transition: filter 0.4s;
+}
+aside .container .skills .techs img:hover {
+  filter: grayscale(0);
+}
+aside .container .skills .techs .tech {
+  position: relative;
+  color: var(--text-color);
+}
+aside .container .skills .techs .tech .tech-name {
+  position: absolute;
+  display: none;
+  top: -4rem;
+  left: 2rem;
+  background-color: rgb(66, 62, 62);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #838383;
+  white-space: nowrap;
+}
+aside .container .skills .techs .tech .tech-name::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(66, 62, 62);
+  position: absolute;
+  bottom: -0.6rem;
+  transform: rotate(-45deg);
+  border-left: 1px solid #838383;
+  border-bottom: 1px solid #838383;
+}
+aside .container .skills .techs .tech:hover .tech-name {
+  display: block;
+}
+
+main {
+  grid-area: main;
+  background-image: url("/assets/wallpaper.jpg");
+  background-repeat: no-repeat;
+  position: relative;
+  animation: space 200s linear infinite alternate;
+  width: 100%;
+  background-size: 400rem;
+}
+@keyframes space {
+  0% {
+    background-position: 0 20%;
+  }
+  25% {
+    background-position: 20% 50%;
+  }
+  50% {
+    background-position: 45% 10%;
+  }
+  75% {
+    background-position: 90% 20%;
+  }
+  100% {
+    background-position: 10% 40%;
+  }
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 31, 75, 0.5803921569);
+  opacity: 0.76;
+}
+main .container {
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+main .container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .container .title h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+main .container .title span {
+  color: var(--dark-purple);
+  font-size: 2rem;
+}
+main .container .title h1 {
+  text-transform: uppercase;
+  font-size: 7.2rem;
+  color: var(--purple);
+  font-weight: 500;
+}
+main .container .about {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10rem;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 3rem;
+}
+main .container .about .text h1 {
+  font-size: 5rem;
+}
+main .container .about .text h1 strong {
+  color: var(--pink);
+}
+main .container .about .text p {
+  margin-top: 3rem;
+  max-width: 70rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+main .container .about .text p span {
+  color: var(--cian-blue);
+}/*# sourceMappingURL=style.css.map */
